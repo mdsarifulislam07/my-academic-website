@@ -1,0 +1,244 @@
+/* 1. GENERAL WEBSITE APPEARANCE */
+:root {
+    --text: darkslategray;
+    --muted: #647084;
+    --accent: #62418b;
+    --accent-light: #eee7f6;
+    --border: #e3e6ed;
+    --background: #f8f9fc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.75;
+}
+
+a { color: var(--accent); }
+
+/* 2. HEADER AND NAVIGATION */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: white;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.site-name {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    color: var(--accent);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 7px;
+}
+
+.nav-link {
+    padding: 8px 11px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    background: #f5f6f9;
+    color: #818a9a; /* Inactive tabs are dim */
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .45px;
+    text-decoration: none;
+    transition: background .2s, color .2s, box-shadow .2s;
+}
+
+.nav-link:hover {
+    background: #f0edf6;
+    color: var(--accent);
+}
+
+.nav-link.active {
+    background: var(--accent-light); /* Active tab is shaded */
+    border-color: #d3c2e9;
+    color: #4c2977;
+    box-shadow: 0 2px 7px rgba(70, 40, 110, .10);
+}
+
+/* 3. PAGES: ONLY THE ACTIVE PAGE IS DISPLAYED */
+main {
+    max-width: 1100px;
+    min-height: 72vh;
+    margin: 35px auto;
+    padding: 42px 48px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(31, 45, 72, .035);
+}
+
+.page { display: none; }
+.page.active { display: block; }
+
+.eyebrow, .resource-type {
+    margin: 0 0 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1.9px;
+}
+
+.page-title {
+    font-size: 31px;
+    line-height: 1.3;
+    margin: 0 0 10px;
+}
+
+.page-intro {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 30px;
+    max-width: 750px;
+}
+
+/* 4. ABOUT PAGE */
+.about-layout {
+    display: grid;
+    grid-template-columns: 27% 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.portrait img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    background: #eef0f5;
+}
+
+.about-content h1 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.position {
+    margin: 8px 0 0;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.institution {
+    margin: 0 0 25px;
+    color: var(--muted);
+}
+
+.about-content h2,
+.information-card h2 {
+    font-size: 19px;
+    margin: 24px 0 9px;
+}
+
+.about-content p { font-size: 15px; }
+.topic-list { color: var(--muted); }
+.profile-links { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 25px; }
+.profile-links a { font-size: 14px; font-weight: 700; text-decoration: none; }
+.profile-links a:hover { text-decoration: underline; }
+
+/* 5. EDUCATION AND CONTENT CARDS */
+.education-list { border-top: 1px solid var(--border); }
+
+.education-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 22px;
+    padding: 19px 6px;
+    border-bottom: 1px solid var(--border);
+}
+
+.year { color: var(--accent); font-weight: 700; }
+.education-item h2 { font-size: 17px; margin: 0; }
+.education-item p { color: var(--muted); margin: 2px 0 0; font-size: 14px; }
+
+.information-card {
+    padding: 25px 28px;
+    margin-top: 25px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fcfcfe;
+}
+
+.information-card h2 { margin-top: 0; }
+.information-card p { font-size: 15px; }
+.two-column-list { columns: 2; padding-left: 20px; }
+.two-column-list li { break-inside: avoid; margin-bottom: 8px; }
+.publications li { padding-bottom: 12px; }
+.publications a { margin-left: 6px; white-space: nowrap; }
+
+/* 6. BUTTONS AND RESOURCE CARDS */
+.primary-button, .secondary-button {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.primary-button { background: var(--accent); color: white; }
+.primary-button:hover { background: #49296e; }
+.secondary-button { background: #eee9f5; color: var(--accent); }
+.secondary-button:hover { background: #e1d6f0; }
+
+.resource-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.resource-card { margin-top: 0; }
+.resource-card h2 { min-height: 52px; }
+.resource-card p:not(.resource-type) { min-height: 70px; }
+
+/* 7. FOOTER */
+footer {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 15px 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* 8. SMALL SCREENS */
+@media (max-width: 900px) {
+    .header-content { flex-direction: column; align-items: flex-start; }
+    nav { justify-content: flex-start; }
+    main { margin: 20px; padding: 30px; }
+    .about-layout { grid-template-columns: 1fr; gap: 25px; }
+    .portrait { max-width: 230px; }
+}
+
+@media (max-width: 600px) {
+    main { margin: 12px; padding: 22px; }
+    .page-title, .about-content h1 { font-size: 27px; }
+    .resource-grid { grid-template-columns: 1fr; }
+    .resource-card h2, .resource-card p:not(.resource-type) { min-height: 0; }
+    .two-column-list { columns: 1; }
+    .education-item { grid-template-columns: 60px 1fr; gap: 14px; }
+    footer { margin: 0 12px 20px; flex-direction: column; }
+}
