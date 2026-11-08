@@ -1,0 +1,309 @@
+
+<!--1: Start a html page-->
+<!DOCTYPE html> 
+
+<!--2: Define this page's 
+    primary language -->
+<html lang="en"> 
+
+<!--3: Build a meta data--> 
+<!--(a) Start a head section using
+    "<head>"-->
+<!--(b) Must incorporate 
+    "<title>xxxx</title>"subsection-->
+    <!--It's rquired as users can 
+    search the page using the words or 
+    phrases machable to the words 
+    or phrases in the title-->
+<!--(b) <link rel="stylesheet" 
+        href="style.css">-->
+<!--(c) May include description of title 
+    using "<meta name="description"
+      content=Dr. Md Sariful Islam is
+      an economist who loves to do research
+      in both applied economics 
+      and theorectial economics".>-->
+<!--(d) -->
+<!--(d) Use "<meta name="viewport" 
+    content="device-width,
+            initial-scale=1.0">" 
+    for open and adjust the page in
+    different screen-->
+<!--(e) use "<meta charset=UTF-8>"
+    to set characters of all language 
+    including mathmatics. This is optional
+    but very effective-->
+ 
+
+
+<head>
+    <title>Dr. Md Sariful Islam  |
+        Associate Professor      |
+        Economics Discipline     | 
+        Khulna University</title>
+    <meta name="description" 
+          content="Dr. Md Sariful Islam is
+      an economist who loves to do research
+      in both applied economics 
+      and theorectial economics.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1.0">
+    <meta charset="UTF-8"> 
+</head>
+
+<body>
+<!--1. HEADER: Name & Navigation-->
+<header>
+<div class="header-content">
+    <a class="site-name" 
+       href="#about">MD SARIFUL ISLAM</a>
+<nav aria-label="Main navigation">
+    <a class="nav-link active" href="#about" data-page="about" aria-current="page">ABOUT</a>
+    <a class="nav-link" href="#education" data-page="education">EDUCATION</a>
+                <a class="nav-link" href="#cv" data-page="cv">CV</a>
+                <a class="nav-link" href="#teaching" data-page="teaching">TEACHING</a>
+                <a class="nav-link" href="#research" data-page="research">RESEARCH</a>
+                <a class="nav-link" href="#resources" data-page="resources">RESOURCES</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. MAIN: Only the section with class "active" is visible -->
+    <main>
+
+        <!-- PAGE 1: ABOUT (shown when the site first opens) -->
+        <section id="about" class="page active">
+            <p class="eyebrow">ACADEMIC PROFILE</p>
+            <div class="about-layout">
+                <div class="portrait">
+                    <!-- Put your own photo, named profile.jpeg, beside index.html -->
+                    <img src="profile.jpeg" alt="Portrait of Md Sariful Islam">
+                </div>
+
+                <div class="about-content">
+                    <h1>Md Sariful Islam, PhD</h1>
+                    <p class="position">Associate Professor</p>
+                    <p class="institution">Economics Discipline · Khulna University · Bangladesh</p>
+
+                    <h2>About Me</h2>
+                    <p>
+                        I am an Associate Professor of Economics at Khulna University,
+                        Bangladesh. My research focuses on applied economics, forest and
+                        natural resource economics, environmental policy, international
+                        trade, and economic theory.
+                    </p>
+                    <p>
+                        My work investigates how economic policies affect resource
+                        allocation, land-use decisions, environmental sustainability,
+                        and economic development. I am also committed to teaching,
+                        student supervision, and quantitative economic research.
+                    </p>
+
+                    <h2>Research Interests</h2>
+                    <p class="topic-list">
+                        Applied Economics · Forest Economics · Environmental and
+                        Natural Resource Economics · International Trade · Economic Theory
+                    </p>
+
+                    <div class="profile-links">
+                        <a href="mailto:sariful_ku@econ.ku.ac.bd">Email</a>
+                        <a href="https://scholar.google.com/citations?user=9UNZmhsAAAAJ&amp;hl=en"
+                           target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                        <a href="https://orcid.org/0000-0002-9942-4684"
+                           target="_blank" rel="noopener noreferrer">ORCID</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: EDUCATION (taken from your CV) -->
+        <section id="education" class="page">
+            <p class="eyebrow">ACADEMIC BACKGROUND</p>
+            <h1 class="page-title">Education</h1>
+            <p class="page-intro">Academic degrees and doctoral research.</p>
+
+            <div class="education-list">
+                <article class="education-item">
+                    <span class="year">2026</span>
+                    <div>
+                        <h2>PhD in Applied Economics</h2>
+                        <p>Auburn University, Alabama, USA</p>
+                    </div>
+                </article>
+                <article class="education-item">
+                    <span class="year">2026</span>
+                    <div>
+                        <h2>Master of Resource Management</h2>
+                        <p>Auburn University, Alabama, USA</p>
+                    </div>
+                </article>
+                <article class="education-item">
+                    <span class="year">2013</span>
+                    <div>
+                        <h2>MSS in Economics</h2>
+                        <p>Khulna University, Bangladesh</p>
+                    </div>
+                </article>
+                <article class="education-item">
+                    <span class="year">2011</span>
+                    <div>
+                        <h2>BSS in Economics</h2>
+                        <p>Khulna University, Bangladesh</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="information-card">
+                <h2>PhD Dissertation</h2>
+                <p><strong>Three Essays on Applied Economics and Policy in the US Forest Sector</strong></p>
+                <p><strong>Advisor:</strong> Professor Daowei Zhang</p>
+                <p><strong>Committee:</strong> Dr. Sunjae Won, Dr. Mykel Taylor, and Dr. Henry Thompson</p>
+            </div>
+        </section>
+
+        <!-- PAGE 3: CURRICULUM VITAE -->
+        <section id="cv" class="page">
+            <p class="eyebrow">PROFESSIONAL RECORD</p>
+            <h1 class="page-title">Curriculum Vitae</h1>
+            <p class="page-intro">
+                My CV includes education, appointments, research, teaching,
+                publications, grants, academic service, and professional activities.
+            </p>
+            <div class="information-card">
+                <h2>Academic Curriculum Vitae</h2>
+                <p>Open or save the latest PDF copy of my CV.</p>
+                <a class="primary-button" href="files/cv-msi-110126.pdf"
+                   target="_blank" rel="noopener noreferrer">View CV (PDF)</a>
+                <a class="secondary-button" href="files/cv-msi-110126.pdf" download>Download CV</a>
+            </div>
+        </section>
+
+        <!-- PAGE 4: TEACHING -->
+        <section id="teaching" class="page">
+            <p class="eyebrow">TEACHING &amp; MENTORSHIP</p>
+            <h1 class="page-title">Teaching</h1>
+            <p class="page-intro">
+                My teaching covers economic theory, applied economics,
+                quantitative methods, and environmental and resource economics.
+            </p>
+            <div class="information-card">
+                <h2>Courses Taught</h2>
+                <ul class="two-column-list">
+                    <li>Principles of Microeconomics</li>
+                    <li>Principles of Macroeconomics</li>
+                    <li>Intermediate Microeconomics</li>
+                    <li>Intermediate Macroeconomics</li>
+                    <li>Econometrics I &amp; II</li>
+                    <li>Advanced Econometrics</li>
+                    <li>Mathematical Economics</li>
+                    <li>Environmental Economics</li>
+                    <li>Natural Resource Economics</li>
+                    <li>Agricultural Economics</li>
+                    <li>International Economics</li>
+                    <li>Public Finance</li>
+                </ul>
+            </div>
+            <div class="information-card">
+                <h2>Student Supervision</h2>
+                <p>
+                    Supervised 73 undergraduate and graduate theses/projects,
+                    with student research contributing to peer-reviewed publications.
+                </p>
+            </div>
+        </section>
+
+        <!-- PAGE 5: RESEARCH -->
+        <section id="research" class="page">
+            <p class="eyebrow">RESEARCH &amp; PUBLICATIONS</p>
+            <h1 class="page-title">Research</h1>
+            <p class="page-intro">
+                Research at the intersection of economic policy, international trade,
+                agricultural and forest markets, and environmental sustainability.
+            </p>
+            <div class="information-card">
+                <h2>Research Areas</h2>
+                <ul class="two-column-list">
+                    <li>Forest and Resource Economics</li>
+                    <li>Environmental Economics</li>
+                    <li>Agricultural Economics</li>
+                    <li>International Trade</li>
+                    <li>Applied Economics</li>
+                    <li>Economic Theory</li>
+                </ul>
+            </div>
+            <div class="information-card">
+                <h2>Selected Peer-Reviewed Publications</h2>
+                <ol class="publications">
+                    <li>
+                        Examining farmers' behavioral drivers to adopt floating farming:
+                        A study in the wetlands of southwestern coastal Bangladesh (2025).
+                        <a href="https://doi.org/10.1007/s41748-024-00433-w"
+                           target="_blank" rel="noopener noreferrer">Article</a>
+                    </li>
+                    <li>
+                        Assessment of household-level adaptation strategies to water
+                        stress in southwestern coastal Bangladesh (2022).
+                        <a href="https://doi.org/10.2166/wp.2022.064"
+                           target="_blank" rel="noopener noreferrer">Article</a>
+                    </li>
+                    <li>
+                        Is there any demand for improved cooking stoves?
+                        Evidence from Bangladesh (2021).
+                        <a href="https://doi.org/10.1016/j.jenvman.2021.113412"
+                           target="_blank" rel="noopener noreferrer">Article</a>
+                    </li>
+                    <li>
+                        The value of environmental (dis)amenities in the urban housing
+                        market: Evidence from Khulna, Bangladesh (2020).
+                        <a href="https://doi.org/10.1016/j.jum.2020.02.001"
+                           target="_blank" rel="noopener noreferrer">Article</a>
+                    </li>
+                </ol>
+                <p>
+                    <a href="https://scholar.google.com/citations?user=9UNZmhsAAAAJ&amp;hl=en"
+                       target="_blank" rel="noopener noreferrer">See my Google Scholar profile</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- PAGE 6: RESOURCES (exactly two subsections) -->
+        <section id="resources" class="page">
+            <p class="eyebrow">LEARNING MATERIALS</p>
+            <h1 class="page-title">Resources</h1>
+            <p class="page-intro">Books, lecture notes, and course materials for students.</p>
+
+            <div class="resource-grid">
+                <article class="information-card resource-card">
+                    <p class="resource-type">COURSE MATERIALS</p>
+                    <h2>Intermediate Microeconomics</h2>
+                    <p>Course book covering intermediate microeconomic theory and applications.</p>
+                    <a class="primary-button" href="files/bk-micro-ii-110126.pdf"
+                       target="_blank" rel="noopener noreferrer">Open Book (PDF)</a>
+                </article>
+
+                <article class="information-card resource-card">
+                    <p class="resource-type">COURSE MATERIALS</p>
+                    <h2>Health Economics</h2>
+                    <p>Course and research materials relating to health economics.</p>
+                    <a class="primary-button" href="files/pr-he-110126.pdf"
+                       target="_blank" rel="noopener noreferrer">Open Materials (PDF)</a>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 3. FOOTER -->
+    <footer>
+        <span>© 2026 Md Sariful Islam</span>
+        <span>Economics Discipline · Khulna University</span>
+    </footer>
+
+    <!-- 4. JAVASCRIPT: Controls which page is visible -->
+    <script src="script.js"></script>
+</body>
+</html>
