@@ -1,86 +1,72 @@
-
-<!--1: Start a html page-->
-<!DOCTYPE html> 
-
-<!--2: Define this page's 
-    primary language -->
-<html lang="en"> 
-
-<!--3: Build a meta data--> 
-<!--(a) Start a head section using
-    "<head>"-->
-<!--(b) Must incorporate 
-    "<title>xxxx</title>"subsection-->
-    <!--It's rquired as users can 
-    search the page using the words or 
-    phrases machable to the words 
-    or phrases in the title-->
-<!--(b) <link rel="stylesheet" 
-        href="style.css">-->
-<!--(c) May include description of title 
-    using "<meta name="description"
-      content=Dr. Md Sariful Islam is
-      an economist who loves to do research
-      in both applied economics 
-      and theorectial economics".>-->
-<!--(d) -->
-<!--(d) Use "<meta name="viewport" 
-    content="device-width,
-            initial-scale=1.0">" 
-    for open and adjust the page in
-    different screen-->
-<!--(e) use "<meta charset=UTF-8>"
-    to set characters of all language 
-    including mathmatics. This is optional
-    but very effective-->
- 
-
+<!DOCTYPE html>
+<!-- STEP 1: Tell the browser to interpret this as an HTML5 document. -->
+<html lang="en">
+<!-- STEP 2: The <html> element contains the entire webpage; lang identifies its language. -->
 
 <head>
-    <title>Dr. Md Sariful Islam  |
-        Associate Professor      |
-        Economics Discipline     | 
-        Khulna University</title>
-    <meta name="description" 
-          content="Dr. Md Sariful Islam is
-      an economist who loves to do research
-      in both applied economics 
-      and theorectial economics.">
+    <!-- STEP 3: <head> contains settings and information about the webpage. -->
 
+    <!-- UTF-8 correctly represents English, Bangla, mathematics, and special symbols. -->
+    <meta charset="UTF-8">
+
+    <!-- The viewport helps the layout adapt to phones, tablets, and computers. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- The <title> is shown on the browser tab and helps describe the page to search engines. -->
+    <title>Dr. Md Sariful Islam | Associate Professor | Economics Discipline | Khulna University</title>
+
+    <!-- A concise summary of this website for search engines; display is not guaranteed. -->
+    <meta name="description"
+          content="Academic website of Dr. Md Sariful Islam, Associate Professor of Economics at Khulna University. Research, teaching, publications, CV, and course resources.">
+
+    <!-- IMPORTANT CORRECTION: Load the external CSS file inside <head>, not <body>. -->
+    <!-- rel="stylesheet" identifies a CSS file; href points to its relative location. -->
     <link rel="stylesheet" href="style.css">
-
-    <meta name="viewport" 
-          content="width=device-width, 
-                   initial-scale=1.0">
-    <meta charset="UTF-8"> 
 </head>
 
 <body>
-<!--1. HEADER: Name & Navigation-->
-<header>
-<div class="header-content">
-    <a class="site-name" 
-       href="#about">MD SARIFUL ISLAM</a>
-<nav aria-label="Main navigation">
-    <a class="nav-link active" href="#about" data-page="about" aria-current="page">ABOUT</a>
-    <a class="nav-link" href="#education" data-page="education">EDUCATION</a>
+    <!-- STEP 4: <body> holds all content visible on the webpage. -->
+
+    <!-- ============================================================ -->
+    <!-- STEP 5: HEADER — website name and clickable navigation       -->
+    <!-- ============================================================ -->
+    <header>
+        <!-- <div> groups items to style/arrange together with CSS. -->
+        <div class="header-content">
+
+            <!-- <a> is a clickable link; #about matches id="about" below. -->
+            <a class="site-name" href="#about">MD SARIFUL ISLAM</a>
+
+            <!-- <nav> identifies the main menu semantically for assistive technology. -->
+            <nav aria-label="Main navigation">
+                <!-- class="nav-link" styles each item; "active" marks the first selected item. -->
+                <!-- data-page tells your JavaScript which <section> should be displayed. -->
+                <a class="nav-link active" href="#about" data-page="about" aria-current="page">ABOUT</a>
+                <a class="nav-link" href="#education" data-page="education">EDUCATION</a>
                 <a class="nav-link" href="#cv" data-page="cv">CV</a>
                 <a class="nav-link" href="#teaching" data-page="teaching">TEACHING</a>
                 <a class="nav-link" href="#research" data-page="research">RESEARCH</a>
                 <a class="nav-link" href="#resources" data-page="resources">RESOURCES</a>
             </nav>
-        </div>
-    </header>
 
-    <!-- 2. MAIN: Only the section with class "active" is visible -->
+        </div> <!-- End of .header-content -->
+    </header> <!-- End of header -->
+
+    <!-- ============================================================ -->
+    <!-- STEP 6: MAIN — six sections or "pages" of your website       -->
+    <!-- ============================================================ -->
+    <!-- CSS and JavaScript can show one section at a time.          -->
+    <!-- <section id="..."> provides the target for each menu link.  -->
     <main>
 
-        <!-- PAGE 1: ABOUT (shown when the site first opens) -->
+        <!-- 6.1 ABOUT: .page.active means this section starts visible. -->
         <section id="about" class="page active">
             <p class="eyebrow">ACADEMIC PROFILE</p>
+
+            <!-- Two containers let CSS arrange the photograph and the text in columns. -->
             <div class="about-layout">
                 <div class="portrait">
-                    <!-- Put your own photo, named profile.jpeg, beside index.html -->
+                    <!-- The photo must be stored beside this HTML file as profile.jpeg. -->
                     <img src="profile.jpeg" alt="Portrait of Md Sariful Islam">
                 </div>
 
@@ -109,6 +95,7 @@
                         Natural Resource Economics · International Trade · Economic Theory
                     </p>
 
+                    <!-- Links may open email, academic profiles, or other websites. -->
                     <div class="profile-links">
                         <a href="mailto:sariful_ku@econ.ku.ac.bd">Email</a>
                         <a href="https://scholar.google.com/citations?user=9UNZmhsAAAAJ&amp;hl=en"
@@ -116,11 +103,11 @@
                         <a href="https://orcid.org/0000-0002-9942-4684"
                            target="_blank" rel="noopener noreferrer">ORCID</a>
                     </div>
-                </div>
-            </div>
-        </section>
+                </div> <!-- End of .about-content -->
+            </div> <!-- End of .about-layout -->
+        </section> <!-- End of About -->
 
-        <!-- PAGE 2: EDUCATION (taken from your CV) -->
+        <!-- 6.2 EDUCATION: each <article> is a self-contained degree entry. -->
         <section id="education" class="page">
             <p class="eyebrow">ACADEMIC BACKGROUND</p>
             <h1 class="page-title">Education</h1>
@@ -157,15 +144,16 @@
                 </article>
             </div>
 
+            <!-- .information-card applies the site's consistent boxed design. -->
             <div class="information-card">
                 <h2>PhD Dissertation</h2>
                 <p><strong>Three Essays on Applied Economics and Policy in the US Forest Sector</strong></p>
                 <p><strong>Advisor:</strong> Professor Daowei Zhang</p>
                 <p><strong>Committee:</strong> Dr. Sunjae Won, Dr. Mykel Taylor, and Dr. Henry Thompson</p>
             </div>
-        </section>
+        </section> <!-- End of Education -->
 
-        <!-- PAGE 3: CURRICULUM VITAE -->
+        <!-- 6.3 CV: PDF links use the path files/<filename>.pdf. -->
         <section id="cv" class="page">
             <p class="eyebrow">PROFESSIONAL RECORD</p>
             <h1 class="page-title">Curriculum Vitae</h1>
@@ -176,13 +164,15 @@
             <div class="information-card">
                 <h2>Academic Curriculum Vitae</h2>
                 <p>Open or save the latest PDF copy of my CV.</p>
+                <!-- target="_blank" opens a new tab; rel improves tab security/privacy. -->
                 <a class="primary-button" href="files/cv-msi-110126.pdf"
                    target="_blank" rel="noopener noreferrer">View CV (PDF)</a>
+                <!-- download asks the browser to download the linked PDF. -->
                 <a class="secondary-button" href="files/cv-msi-110126.pdf" download>Download CV</a>
             </div>
-        </section>
+        </section> <!-- End of CV -->
 
-        <!-- PAGE 4: TEACHING -->
+        <!-- 6.4 TEACHING: <ul> is a bulleted list; <li> is a list item. -->
         <section id="teaching" class="page">
             <p class="eyebrow">TEACHING &amp; MENTORSHIP</p>
             <h1 class="page-title">Teaching</h1>
@@ -214,9 +204,9 @@
                     with student research contributing to peer-reviewed publications.
                 </p>
             </div>
-        </section>
+        </section> <!-- End of Teaching -->
 
-        <!-- PAGE 5: RESEARCH -->
+        <!-- 6.5 RESEARCH: <ol> is an ordered/numbered publications list. -->
         <section id="research" class="page">
             <p class="eyebrow">RESEARCH &amp; PUBLICATIONS</p>
             <h1 class="page-title">Research</h1>
@@ -268,14 +258,15 @@
                        target="_blank" rel="noopener noreferrer">See my Google Scholar profile</a>
                 </p>
             </div>
-        </section>
+        </section> <!-- End of Research -->
 
-        <!-- PAGE 6: RESOURCES (exactly two subsections) -->
+        <!-- 6.6 RESOURCES: two course cards, each with its PDF links. -->
         <section id="resources" class="page">
             <p class="eyebrow">LEARNING MATERIALS</p>
             <h1 class="page-title">Resources</h1>
             <p class="page-intro">Books, lecture notes, and course materials for students.</p>
 
+            <!-- .resource-grid allows CSS to arrange both course cards side-by-side. -->
             <div class="resource-grid">
                 <article class="information-card resource-card">
                     <p class="resource-type">COURSE MATERIALS</p>
@@ -285,25 +276,37 @@
                        target="_blank" rel="noopener noreferrer">Open Book (PDF)</a>
                 </article>
 
+                <!-- HEALTH ECONOMICS: two PDF links under one course heading. -->
                 <article class="information-card resource-card">
                     <p class="resource-type">COURSE MATERIALS</p>
                     <h2>Health Economics</h2>
                     <p>Course and research materials relating to health economics.</p>
+
+                    <!-- Existing Health Economics materials PDF. -->
                     <a class="primary-button" href="files/pr-he-110126.pdf"
-                       target="_blank" rel="noopener noreferrer">Open Materials (PDF)</a>
+                       target="_blank" rel="noopener noreferrer">Materials</a>
+
+                    <!-- NEW: Class Test PDF. The file must exist inside the files/ folder. -->
+                    <!-- Reuse .primary-button to match the design of the existing link. -->
+                    <a class="primary-button" href="files/ct-he-110126.pdf"
+                       target="_blank" rel="noopener noreferrer">Class Test Marks</a>
                 </article>
-            </div>
-        </section>
+            </div> <!-- End of resource grid -->
+        </section> <!-- End of Resources -->
 
-    </main>
+    </main> <!-- End of main content -->
 
-    <!-- 3. FOOTER -->
+    <!-- ============================================================ -->
+    <!-- STEP 7: FOOTER — information displayed at the bottom         -->
+    <!-- ============================================================ -->
     <footer>
         <span>© 2026 Md Sariful Islam</span>
         <span>Economics Discipline · Khulna University</span>
     </footer>
 
-    <!-- 4. JAVASCRIPT: Controls which page is visible -->
+    <!-- STEP 8: Load existing JavaScript after the page elements. -->
+    <!-- script.js can find elements and switch the active section on a menu click. -->
+    <!-- No extra JavaScript is needed to open a PDF through a normal <a> link. -->
     <script src="script.js"></script>
 </body>
 </html>
